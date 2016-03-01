@@ -4,7 +4,19 @@ package yolo;
  * Created by Greg on 01.03.2016.
  */
 public class Calculator {
-    public int add(int l1,int l2){
-        return l1+l2;
+    public int add(int a,int b){
+        return a+b;
+    }
+    int sub(int a, int b) { return a-b; }
+    int multi(int a, int b) { return a*b; }
+    int div(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Argument 'b' is 0");
+        }
+        else return a/b;
+    }
+    boolean greater(int a, int b) {
+        if (a>b) return true;
+        else return false;
     }
 }

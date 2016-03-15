@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class wegetableManagerTest extends TestCase {
     @Test
     public void testAdd() throws Exception {
-        
+
     }
     @Test
     public void testGetAll() throws Exception {

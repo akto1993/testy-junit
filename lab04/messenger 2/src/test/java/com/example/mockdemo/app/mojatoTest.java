@@ -40,48 +40,26 @@ public class mojatoTest {
     @Test
     public void sendingValidRecipientAndServer()
             throws MalformedRecipientException {
-
-
-        when(msMock.send(VALID_SERVER, VALID_MESSAGE)).thenReturn(
-                SendingStatus.SENT);
-
-        when(msMock.checkConnection(VALID_SERVER)).thenReturn(
-                ConnectionStatus.SUCCESS);
-
-
+        when(msMock.send(VALID_SERVER, VALID_MESSAGE)).thenReturn(SendingStatus.SENT);
+        when(msMock.checkConnection(VALID_SERVER)).thenReturn(ConnectionStatus.SUCCESS);
         assertThat(messenger.testConnection(VALID_SERVER), equalTo(0));
-        assertThat(messenger.sendMessage(VALID_SERVER, VALID_MESSAGE),
-                either(equalTo(0)).or(equalTo(1)));
-
+        assertThat(messenger.sendMessage(VALID_SERVER, VALID_MESSAGE),either(equalTo(0)).or(equalTo(1)));
         verify(msMock, atLeastOnce()).send(VALID_SERVER, VALID_MESSAGE);
     }
 
     @Test
     public void sendingInvalidServer() throws MalformedRecipientException {
-
-        when(msMock.checkConnection(INVALID_SERVER)).thenReturn(
-                ConnectionStatus.FAILURE);
-        when(msMock.send(INVALID_SERVER, VALID_MESSAGE)).thenReturn(
-                SendingStatus.SENDING_ERROR);
-
-
+        when(msMock.checkConnection(INVALID_SERVER)).thenReturn(ConnectionStatus.FAILURE);
+        when(msMock.send(INVALID_SERVER, VALID_MESSAGE)).thenReturn(SendingStatus.SENDING_ERROR);
         assertThat(messenger.testConnection(INVALID_SERVER), equalTo(1));
         assertEquals(1, messenger.sendMessage(INVALID_SERVER, VALID_MESSAGE));
-
         verify(msMock).checkConnection(INVALID_SERVER);
     }
 
     @Test
     public void sendingInvalidReceipient() throws MalformedRecipientException {
-
-        when(msMock.send(VALID_SERVER, INVALID_MESSAGE)).thenThrow(
-                new MalformedRecipientException());
-
+        when(msMock.send(VALID_SERVER, INVALID_MESSAGE)).thenThrow(new MalformedRecipientException());
         assertEquals(2, messenger.sendMessage(VALID_SERVER, INVALID_MESSAGE));
-
         verify(msMock).send(VALID_SERVER, INVALID_MESSAGE);
     }
-
-    
-
 }

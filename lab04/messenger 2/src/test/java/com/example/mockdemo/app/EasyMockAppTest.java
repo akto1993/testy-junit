@@ -1,4 +1,4 @@
-package com.example.mockdemo.app;
+/*package com.example.mockdemo.app;
 
 import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.createMock;
@@ -97,3 +97,4 @@ public class EasyMockAppTest {
 		verify(msMock);
 	}
 }
+*/

@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.example.mockdemo.app.mojatoTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.295 sec <<< FAILURE!
-sendingConnectionStatus(com.example.mockdemo.app.mojatoTest)  Time elapsed: 0.27 sec  <<< ERROR!
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.287 sec <<< FAILURE!
+sendingConnectionStatus(com.example.mockdemo.app.mojatoTest)  Time elapsed: 0.267 sec  <<< ERROR!
 java.lang.NullPointerException
 	at com.example.mockdemo.app.Messenger.testConnection(Messenger.java:16)
-	at com.example.mockdemo.app.mojatoTest.sendingConnectionStatus(mojatoTest.java:92)
+	at com.example.mockdemo.app.mojatoTest.sendingConnectionStatus(mojatoTest.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

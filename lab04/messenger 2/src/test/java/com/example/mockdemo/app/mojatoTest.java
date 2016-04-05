@@ -62,4 +62,15 @@ public class mojatoTest {
         assertEquals(2, messenger.sendMessage(VALID_SERVER, INVALID_MESSAGE));
         verify(msMock).send(VALID_SERVER, INVALID_MESSAGE);
     }
+
+    @Test
+    public void sendingConnectionStatus() {
+        ArgumentCaptor<String> capturedServer = ArgumentCaptor.forClass(String.class);
+        when(msMock.checkConnection(capturedServer.capture())).thenReturn(ConnectionStatus.FAILURE);
+        assertEquals(1, messenger.testConnection(INVALID_SERVER));
+        assertEquals(INVALID_SERVER, capturedServer.getValue());
+
+        verify(msMock).checkConnection(INVALID_SERVER);
+    }
+
 }

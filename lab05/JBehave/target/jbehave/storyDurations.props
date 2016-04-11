@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Mon Apr 11 19:16:06 CEST 2016
+threads=1
+total=0
+threadAverage=0
+com/example/jbehavedemo/messenger_test.story=0

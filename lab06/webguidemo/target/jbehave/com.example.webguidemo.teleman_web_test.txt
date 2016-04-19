@@ -1,0 +1,53 @@
+
+(com/example/webguidemo/teleman_web_test.story)
+org.jbehave.web.selenium.PerStoryWebDriverSteps.beforeStory() (FAILED)
+(org.jbehave.core.failures.BeforeOrAfterFailed: Method beforeStory (annotated with @BeforeStory in class org.jbehave.web.selenium.PerStoryWebDriverSteps) failed: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","e":true,"v":"45.0.2","st":1460450274753}},"winreg-app-global":{"{F003DA68-8256-4b37-A6C4-350FA04494DF}":{"d":"C:\\Program Files\\Logitech\\SetPointP\\LogiSmoothFirefoxExt","e":false,"v":"6.5","st":1453285854896,"mt":1440547208000}}}
+1461058253362	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1461058253363	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1461058253363	addons.xpi	DEBUG	Existing add-on loop@mozilla.org in app-system-defaults
+1461058253364	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1461058253365	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1461058253365	addons.xpi	DEBUG	Existing add-on {F003DA68-8256-4b37-A6C4-350FA04494DF} in winreg-app-global
+1461058253365	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\Greg\\AppData\\Local\\Temp\\anonymous5686985385444236368webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.45.0","st":1461058247345,"mt":1461058247324}},"app-system-defaults":{"loop@mozilla.org":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","e":true,"v":"1.1.14","st":1460450274692}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","e":true,"v":"45.0.2","st":1460450274753}},"winreg-app-global":{"{F003DA68-8256-4b37-A6C4-350FA04494DF}":{"d":"C:\\Program Files\\Logitech\\SetPointP\\LogiSmoothFirefoxExt","e":false,"v":"6.5","st":1453285854896,"mt":1440547208000}}}
+1461058253367	addons.xpi	DEBUG	No changes found
+1461058253375	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1461058253376	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1461058253390	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.1.14
+1461058253405	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\Greg\AppData\Local\Temp\anonymous5686985385444236368webdriver-profile\extensions.json
+1461058253412	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1461058253412	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1461058253412	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1461058253426	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1461058253426	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1461058253426	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1461058253426	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1461058253426	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1461058253427	addons.manager	DEBUG	Starting provider: GMPProvider
+1461058253432	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1461058253432	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1461058253432	addons.manager	DEBUG	Starting provider: PluginProvider
+1461058253432	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1461058253433	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1461058253433	addons.manager	DEBUG	Completed startup sequence
+1461058253662	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1461058253662	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1461058253664	addons.xpi-utils	DEBUG	Successfully read XPI database
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1461058254318	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1461058254318	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1461058254318	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'DESKTOP-81P4793', ip: '172.17.16.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
+Driver info: driver.version: FirefoxDriver)
+Scenario: User searches for a single step
+Given user is on Home page (FAILED)
+(org.jbehave.web.selenium.DelegatingWebDriverProvider$DelegateWebDriverNotFound: WebDriver has not been found for this thread.
+Please verify you are using the correct WebDriverProvider, with the appropriate credentials if using remote access, e.g. to SauceLabs: -DSAUCE_USERNAME=xxxxxx -DSAUCE_ACCESS_KEY=xxx-xxxx-xxxx-xxxx-xxx )
+When user opens Sport link (NOT PERFORMED)
+Then Sport page is shown (NOT PERFORMED)
+
+org.jbehave.web.selenium.PerStoryWebDriverSteps.afterStory() (FAILED)
+(org.jbehave.core.failures.BeforeOrAfterFailed: Method afterStory (annotated with @AfterStory in class org.jbehave.web.selenium.PerStoryWebDriverSteps) failed: java.lang.NullPointerException)
+

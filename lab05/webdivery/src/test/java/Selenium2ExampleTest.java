@@ -33,17 +33,17 @@ public class Selenium2ExampleTest {
 
     @Test
     public void homePage(){
-        driver.get("http://www.teleman.pl");
+        driver.get("https://gdansk.pjwstk.edu.pl/");
 
-        element = driver.findElement(By.linkText("Polsat"));
+        element = driver.findElement(By.linkText("PJATK"));
         assertNotNull(element);
     }
 
     @Test
     public void polsatPage(){
-        driver.get("http://www.teleman.pl/");
-        driver.findElement(By.linkText("Polsat")).click();
-        element = driver.findElement(By.linkText("Polsat"));
+        driver.get("https://gdansk.pjwstk.edu.pl/");
+        driver.findElement(By.linkText("E-dziekanat")).click();
+        element = driver.findElement(By.linkText("Logowanie"));
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         assertNotNull(screenshot);
 

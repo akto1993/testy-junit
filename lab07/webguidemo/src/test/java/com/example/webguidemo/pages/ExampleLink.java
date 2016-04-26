@@ -12,7 +12,7 @@ public class ExampleLink extends WebDriverPage{
 	}
 
 	public void open() {
-		get("http://www.seleniumframework.com/setup-first-project/");
+		get("http://www.seleniumframework.com/setup-visual-studio/");
 		manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 }

@@ -50,11 +50,12 @@ public class Home extends WebDriverPage {
 	}
 	
 	public void clickVerButton(){
+		WebElement element = driver.findElement(By.className("vfb-submit"));
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		findElement(By.id("vfb-4")).click();
 	}
 	public boolean findValidatorMessageRequired(){
-		WebElement element = driver.findElement(By.className("vfb-submit"));
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
+
 		WebElement pom = findElement(By.xpath("//*[contains(text(),'This field is required.')]"));
 		if (pom != null){
 			 return true;

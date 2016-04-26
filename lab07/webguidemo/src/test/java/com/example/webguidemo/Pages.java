@@ -2,17 +2,17 @@ package com.example.webguidemo;
 
 import org.jbehave.web.selenium.WebDriverProvider;
 
-import com.example.webguidemo.pages.SomeLink;
+import com.example.webguidemo.pages.ExampleLink;
 import com.example.webguidemo.pages.VerLink;
 import com.example.webguidemo.pages.Home;
 
 public class Pages {
 
 	private WebDriverProvider driverProvider;
-	
+
 	//Pages
 	private Home home;
-	private SomeLink somelink;
+	private ExampleLink examplelink;
 	private VerLink verLink;
 	// ...
 
@@ -28,11 +28,11 @@ public class Pages {
 		return home;
 	}
 	
-	public SomeLink somelink(){
-		if (somelink == null) {
-			somelink = new SomeLink(driverProvider);
+	public ExampleLink examplelink(){
+		if (examplelink == null) {
+			examplelink = new ExampleLink(driverProvider);
 		}
-		return somelink;
+		return examplelink;
 	}
 	public VerLink verLink(){
 		if (verLink == null) {

@@ -5,9 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.jbehave.web.selenium.WebDriverPage;
 import org.jbehave.web.selenium.WebDriverProvider;
 
-public class SomeLink extends WebDriverPage{
+public class ExampleLink extends WebDriverPage{
 	
-	public SomeLink(WebDriverProvider driverProvider) {
+	public ExampleLink(WebDriverProvider driverProvider) {
 		super(driverProvider);		
 	}
 

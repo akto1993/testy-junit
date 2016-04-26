@@ -1,8 +1,8 @@
 Scenario: Test Practiceform page
 
 Given user is on Home page
-When user click some link
-Then some page is shown
+When user click example link
+Then example page is shown
 
 Given user is on Home page
 When user click Submit

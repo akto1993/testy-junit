@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.webguidemo.TestpageWebTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.558 sec <<< FAILURE!
-run(com.example.webguidemo.TestpageWebTest)  Time elapsed: 10.431 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.548 sec <<< FAILURE!
+run(com.example.webguidemo.TestpageWebTest)  Time elapsed: 18.379 sec  <<< ERROR!
 org.jbehave.core.embedder.Embedder$RunningStoriesFailed: Failures in running stories: ReportsCount[stories=1,storiesNotAllowed=0,storiesPending=0,scenarios=1,scenariosFailed=1,scenariosNotAllowed=0,scenariosPending=0,stepsFailed=1]
 	at org.jbehave.core.embedder.Embedder$ThrowingRunningStoriesFailed.handleFailures(Embedder.java:534)
 	at org.jbehave.core.embedder.Embedder.handleFailures(Embedder.java:270)

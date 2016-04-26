@@ -18,14 +18,14 @@ public class TestpageSteps {
         pages.home().open();        
     }
 
-    @When("user click some link")
-    public void userClicksOnSomeLink(){
-        pages.home().clickSomeLink();
+    @When("user click example link")
+    public void userClicksOnExampleLink(){
+        pages.home().clickExampleLink();
     }
 
-    @Then("some page is shown")
-    public void somePageIsShown(){
-       assertEquals("Selenium Framework |   Setup First Project", pages.somelink().getTitle());
+    @Then("example page is shown")
+    public void examplePageIsShown(){
+       assertEquals("Selenium Framework |   Setup First Project", pages.examplelink().getTitle());
        assertNotNull(true);
     }
     

@@ -28,7 +28,7 @@ public class Home extends WebDriverPage {
 		manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
-	public void clickSomeLink(){
+	public void clickExampleLink(){
 		findElement(By.xpath("//*[@id='recent-posts-3']/ul/li[1]/a")).click();
 		manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}

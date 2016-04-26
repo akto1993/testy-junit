@@ -1,0 +1,23 @@
+
+(com/example/webguidemo/testpage.story)
+Scenario: Test Practiceform page
+Given user is on Home page
+When user click some link
+Then some page is shown (FAILED)
+(org.junit.ComparisonFailure: expected:<...elenium Framework | [  Setup First Project]> but was:<...elenium Framework | [Practiceform]>)
+Given user is on Home page (NOT PERFORMED)
+When user click Submit (NOT PERFORMED)
+Then This field is required alert validator is shown (NOT PERFORMED)
+Given user is on Home page (NOT PERFORMED)
+When user types 12 in field (NOT PERFORMED)
+Then user pass a validation (NOT PERFORMED)
+Given user is on Home page (NOT PERFORMED)
+When user click alert button (NOT PERFORMED)
+Then alert is shown (NOT PERFORMED)
+When user click on /a/span/ link (NOT PERFORMED)
+Then create PrSc (NOT PERFORMED)
+Given user is on Home page (NOT PERFORMED)
+When user types 1111 in field (NOT PERFORMED)
+Then msg validation show Please enter no more than 2 characters. (NOT PERFORMED)
+
+

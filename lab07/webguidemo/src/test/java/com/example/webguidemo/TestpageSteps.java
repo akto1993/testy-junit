@@ -17,15 +17,15 @@ public class TestpageSteps {
     public void userIsOnHomePage(){        
         pages.home().open();        
     }
- 
+
     @When("user click some link")
-    public void userClicksOnSomeLink(){        
+    public void userClicksOnSomeLink(){
         pages.home().clickSomeLink();
     }
 
     @Then("some page is shown")
     public void somePageIsShown(){
-       assertEquals("Selenium Framework | Setup Visual Studio", pages.somelink().getTitle());
+       assertEquals("Selenium Framework |   Setup First Project", pages.somelink().getTitle());
        assertNotNull(true);
     }
     

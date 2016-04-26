@@ -37,7 +37,8 @@ public class TestpageWebTest extends JUnitStories {
     private ContextView contextView = new LocalFrameContextView().sized(500, 100);
 
     public TestpageWebTest() {
-    	System.setProperty("webdriver.chrome.driver", "D:/chromedriver/chromedriver.exe");
+    	//System.setProperty("webdriver.chrome.driver", "D:/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/kuba/Dev/chromedriver/chromedriver");
 	}
 
 	@Override

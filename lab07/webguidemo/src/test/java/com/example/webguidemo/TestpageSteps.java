@@ -25,7 +25,7 @@ public class TestpageSteps {
 
     @Then("example page is shown")
     public void examplePageIsShown(){
-       assertEquals("Selenium Framework |  Setup Visual Studio", pages.examplelink().getTitle());
+       assertTrue(pages.examplelink().getTitle().contains("Visual"));
        assertNotNull(true);
     }
     

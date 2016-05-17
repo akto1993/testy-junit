@@ -36,7 +36,7 @@ public class Home extends WebDriverPage {
 	}
 	
 	public void clickAlertButton() throws InterruptedException{
-		WebElement element = driver.findElement(By.className("vfb-submit"));
+		WebElement element = driver.findElement(By.xpath("//*[@id='alert']"));
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		findElement(By.xpath("//*[@id='alert']")).click();
 		Thread.sleep(2000);

@@ -10,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.example.restservicedemo.domain.Car;
 import com.example.restservicedemo.domain.Person;
 import com.example.restservicedemo.service.PersonManager;
 
@@ -26,6 +27,17 @@ public class PersonRESTService {
 		return p;
 	}
 	
+	
+	@GET
+	@Path("/car/{carId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Car getCar(@PathParam("carId") Long id){
+		Car c = new Car();
+		c.setId(id);
+		Car car = pm.getCarWithOwner(c);
+		return car;
+	}
+	
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -37,7 +49,7 @@ public class PersonRESTService {
 	
 	@GET
 	@Path("/test")
-	@Produces(MediaType.TEXT_HTML)
+	@Produces(MediaType.TEXT_PLAIN)
 	public String test(){
 		return "REST API /person is running";
 	}

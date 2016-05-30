@@ -1,0 +1,6 @@
+com\example\restservicedemo\domain\Car.class
+com\example\restservicedemo\rest\CarRESTService.class
+com\example\restservicedemo\rest\PersonRESTService.class
+com\example\restservicedemo\service\CarManager.class
+com\example\restservicedemo\service\PersonManager.class
+com\example\restservicedemo\domain\Person.class

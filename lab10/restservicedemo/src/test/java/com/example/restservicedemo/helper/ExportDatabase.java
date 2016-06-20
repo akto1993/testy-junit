@@ -21,5 +21,6 @@ public class ExportDatabase {
 
 		FlatXmlDataSet.write(connection.createDataSet(), new FileOutputStream(
 				"src/test/resources/fullData.xml"));
+
 	}
 }

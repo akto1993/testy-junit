@@ -1,6 +1,7 @@
 package com.example.restservicedemo;
 
-import static com.jayway.restassured.RestAssured.given;
+import static com.jayway.restassured.RestAssured.*;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,15 +25,12 @@ import org.junit.Test;
 
 import com.example.restservicedemo.domain.Car;
 import com.example.restservicedemo.domain.Person;
-import com.example.restservicedemo.service.PersonManager;
 import com.jayway.restassured.RestAssured;
 
 public class PersonServiceRESTDBTest {
 	
-	private static IDatabaseConnection connection ;
+	private static IDatabaseConnection connection;
 	private static IDatabaseTester databaseTester;
-	
-	private static PersonManager pm = new PersonManager();
 
 	@BeforeClass
 	public static void setUp() throws Exception{
@@ -73,21 +71,55 @@ public class PersonServiceRESTDBTest {
 	}
 	
 	@Test
-	public void addCar() throws Exception {
-		Car aCar = new Car(2, "Opel", 2011);
-		given().contentType(MediaType.APPLICATION_JSON).body(aCar)
-				.when().post("/cars/").then().assertThat().statusCode(201);
+	public void getAllPersons() throws Exception {
+		
+		IDataSet dbDataSet = connection.createDataSet();
+		ITable table = dbDataSet.getTable("PERSON");
+		
+		assertNotNull(table);
+	}
+	
+	@Test
+	public void clearPersons() throws Exception {
+		
+		IDataSet dbDataSet = connection.createDataSet();
+		ITable table = dbDataSet.getTable("PERSON");
+		
+		assertNotNull(table);
+		
+		delete("/person/").then().assertThat().statusCode(200);
+			
+	}
+	
+	@Test
+	public void sellCar() throws Exception {
+		
+		delete("/person/").then().assertThat().statusCode(200);
+		delete("/cars/").then().assertThat().statusCode(200);
+		Person aPerson = new Person("Stachu", 1943); 
+		Car aCar = new Car(1, "Mercedes", 2007);
+		
+		given().contentType(MediaType.APPLICATION_JSON)
+			.body(aCar).when().post("/cars/").then().assertThat().statusCode(201);
+		
+		given().contentType(MediaType.APPLICATION_JSON)
+			.body(aPerson).when().post("/person/").then().assertThat().statusCode(201);
+		
+		Person person = get("/person/5").as(Person.class);
+		Car car = get("/cars/2").as(Car.class);
+		
+		given().contentType(MediaType.APPLICATION_JSON)
+			.when().post("/cars/sell/" + car.getId() + "/" + person.getId()).then().assertThat().statusCode(201);
+		
 
 		IDataSet dbDataSet = connection.createDataSet();
 		ITable actualTable = dbDataSet.getTable("CAR");
-		ITable filteredTable = DefaultColumnFilter.excludedColumnsTable
-				(actualTable, new String[]{"OWNER_ID"});
 		
 		IDataSet expectedDataSet = new FlatXmlDataSetBuilder().build(
-				new File("src/test/resources/carData.xml"));
+				new File("src/test/resources/carWithPersonData.xml"));
 		ITable expectedTable = expectedDataSet.getTable("CAR");
 		
-		Assertion.assertEquals(expectedTable, filteredTable);
+		Assertion.assertEquals(expectedTable, actualTable);
 	}
 	
 	@AfterClass

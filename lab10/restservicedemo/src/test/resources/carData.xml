@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <CAR MODEL="Ferrari" YOP="1980"/>
+  <CAR MODEL="Tesla" YOP="1999"/>
+  <CAR MODEL="Opel" YOP="2011"/>
+</dataset>
